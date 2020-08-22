@@ -9,15 +9,19 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.EcommerceShop.Model.Users;
+import com.example.EcommerceShop.RepeatedInfo.ForgottenPassword;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity
 {
@@ -25,6 +29,7 @@ public class LoginActivity extends AppCompatActivity
     private EditText InputPhone, InputPassword;
     private ProgressDialog loadingBar;
     private String parentdatabaseName = "Users";
+    private CheckBox CheckBoxKey;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -35,6 +40,9 @@ public class LoginActivity extends AppCompatActivity
         InputPhone = (EditText) findViewById(R.id.login_phone_number);
         InputPassword = (EditText) findViewById(R.id.login_password);
         loadingBar = new ProgressDialog(this);
+
+        CheckBoxKey = (CheckBox) findViewById(R.id.rememberCheckbox);
+        Paper.init(this);
 
 
         LoginButton.setOnClickListener(new View.OnClickListener()
@@ -72,6 +80,13 @@ public class LoginActivity extends AppCompatActivity
 
     private void AllowAccessToAccount(final String phone, final String password)
     {
+
+        if(CheckBoxKey.isChecked())
+        {
+            Paper.book().write(ForgottenPassword.UserPhoneKey, phone);
+            Paper.book().write(ForgottenPassword.UserPasswordKey, password);
+        }
+
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -94,6 +109,11 @@ public class LoginActivity extends AppCompatActivity
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                         }
+                        else
+                            {
+                                Toast.makeText(LoginActivity.this, "PassWord is Wrong", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+                            }
                     }
                 }
                 else 
