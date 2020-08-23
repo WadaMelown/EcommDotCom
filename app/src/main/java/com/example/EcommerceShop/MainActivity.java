@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginButton = (Button) findViewById(R.id.main_login);
-        signupButton = (Button) findViewById(R.id.main_login);
+        loginButton = (Button) findViewById(R.id.login_button);
+        signupButton = (Button) findViewById(R.id.signup_button);
         loadingBar = new ProgressDialog(this);
 
         Paper.init(this);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
