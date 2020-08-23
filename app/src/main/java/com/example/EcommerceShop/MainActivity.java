@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.mapbox.mapboxsdk.maps.MapView;
 
 import io.paperdb.Paper;
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity
 {
     private Button loginButton, signupButton;
     private ProgressDialog loadingBar;
+    private MapView mapView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity
         loginButton = (Button) findViewById(R.id.login_button);
         signupButton = (Button) findViewById(R.id.signup_button);
         loadingBar = new ProgressDialog(this);
+
 
         Paper.init(this);
 
@@ -118,6 +122,7 @@ public class MainActivity extends AppCompatActivity
             {
 
             }
+
         });
     }
 }

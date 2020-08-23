@@ -106,5 +106,14 @@
         android:text="Remember Me"
         android:textColor="@color/common_google_signin_btn_text_light_focused" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="58dp" />
+
 
 </RelativeLayout>
