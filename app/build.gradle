@@ -30,11 +30,11 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-   //MapBox API/Dependencies
+    //MapBox API/Dependencies
     implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:6.0.1'
     implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.5.0'
     implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation:0.13.0'
-    implementation('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.13.0'){
+    implementation('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.13.0') {
         transitive = true
     }
     testImplementation 'junit:junit:4.12'

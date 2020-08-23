@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class ItemCategory extends AppCompatActivity
+public class ItemCatalogue extends AppCompatActivity
 {
     private ImageView tshirts, sportsTshirts, femaleDresses, sweaters;
     private ImageView glasses, hatsCaps, walletsBags, shoes;
@@ -16,13 +16,13 @@ public class ItemCategory extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_items_catalogues);
+        setContentView(R.layout.activity_item_catalogue);
 
         tshirts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "tshirts");
                 startActivity(intent);
 
@@ -33,7 +33,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "sportsTshirts");
                 startActivity(intent);
             }
@@ -43,7 +43,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "femaledresses");
                 startActivity(intent);
             }
@@ -53,7 +53,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "sweaters");
                 startActivity(intent);
             }
@@ -63,7 +63,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "glasses");
                 startActivity(intent);
             }
@@ -73,7 +73,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "Hats Caps");
                 startActivity(intent);
             }
@@ -84,7 +84,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "Wallets Purses");
                 startActivity(intent);
             }
@@ -94,7 +94,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "Shoes");
                 startActivity(intent);
             }
@@ -104,7 +104,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "Headphones");
                 startActivity(intent);
             }
@@ -114,7 +114,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "Laptops");
                 startActivity(intent);
             }
@@ -124,7 +124,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "Watches");
                 startActivity(intent);
             }
@@ -134,7 +134,7 @@ public class ItemCategory extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(ItemCategory.this, ActiveAdminCategory.class);
+                Intent intent = new Intent(ItemCatalogue.this, ActiveAdminCategory.class);
                 intent.putExtra("category", "MobilePhones");
                 startActivity(intent);
             }

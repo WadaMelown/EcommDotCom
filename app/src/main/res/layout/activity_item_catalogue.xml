@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemCategory">
+    tools:context=".ItemCatalogue">
 
     <TextView
         android:id="@+id/categories"
@@ -31,7 +31,7 @@
 
     <ImageView
         android:id="@+id/t_shirt"
-        android:layout_width="wrap_content"
+        android:layout_width="106dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -89,7 +89,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="-4dp"
-        android:layout_marginTop="303dp"
+        android:layout_marginTop="293dp"
         android:src="@drawable/glasses" />
 
     <ImageView
@@ -99,10 +99,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="307dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="294dp"
         android:src="@drawable/purses_bags" />
-
 
     <ImageView
         android:id="@+id/hats"
@@ -111,8 +110,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="294dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="293dp"
         android:src="@drawable/hats" />
 
     <ImageView
@@ -123,9 +122,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="-5dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="-1dp"
         android:src="@drawable/shoess" />
 
     <LinearLayout
@@ -144,8 +143,8 @@
         android:layout_height="101dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="-3dp"
-        android:layout_marginTop="483dp"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="468dp"
         android:src="@drawable/headphoness" />
 
     <ImageView
@@ -154,8 +153,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="491dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="470dp"
         android:src="@drawable/laptops" />
 
     <ImageView
@@ -164,8 +163,8 @@
         android:layout_height="109dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="210dp"
-        android:layout_marginTop="482dp"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="468dp"
         android:src="@drawable/watches" />
 
     <ImageView
@@ -175,8 +174,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="325dp"
-        android:layout_marginTop="484dp"
-        android:layout_marginEnd="-10dp"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="0dp"
         android:src="@drawable/mobiles" />
 </RelativeLayout>
