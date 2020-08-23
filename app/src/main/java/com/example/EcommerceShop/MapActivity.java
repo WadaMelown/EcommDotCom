@@ -42,6 +42,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_map);
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(this);
     }
 
     @Override
@@ -74,6 +75,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         if(lastlocation!=null)
         {
             originLocation = lastlocation;
+            setCameraPlace(lastlocation);
         }
         else
             {
@@ -91,19 +93,23 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private void setCameraPlace(Location location)
     {
         map.animateCamera(CameraUpdateFactory.newLatLngZoom
-                (new LatLng(location.getLatitude(),location.getLongitude(), 13.0 )));
+                (new LatLng(location.getLatitude(),location.getLongitude()), 13.0 ));
     }
 
     @Override
     public void onConnected()
     {
-
+        locationEngine.requestLocationUpdates();
     }
 
     @Override
     public void onLocationChanged(Location location)
     {
-
+        if(location != null)
+        {
+            originLocation = location;
+            setCameraPlace(location);
+        }
     }
 
     @Override
@@ -130,6 +136,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     protected void onStart()
     {
         super.onStart();
+        if(locationEngine != null)
+        {
+            locationEngine.requestLocationUpdates();
+        }
+        if(locationLayerPlugin!= null)
+        {
+            locationLayerPlugin.onStart();
+        }
         mapView.onStart();
     }
 
@@ -151,6 +165,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     protected void onStop()
     {
         super.onStop();
+        if(locationEngine != null)
+        {
+            locationEngine.removeLocationUpdates();
+        }
+        if(locationLayerPlugin != null)
+        {
+            locationLayerPlugin.onStop();
+        }
         mapView.onStop();
     }
 
@@ -171,6 +193,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     protected void onDestroy()
     {
         super.onDestroy();
+        if(locationEngine != null)
+        {
+            locationEngine.deactivate();
+        }
         mapView.onDestroy();
     }
 

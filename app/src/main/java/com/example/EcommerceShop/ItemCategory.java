@@ -16,7 +16,7 @@ public class ItemCategory extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_items_catalogue);
+        setContentView(R.layout.activity_items_catalogues);
 
         tshirts.setOnClickListener(new View.OnClickListener() {
             @Override
