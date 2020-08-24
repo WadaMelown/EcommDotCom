@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.S6105692.R;
 
 public class SearchListingActivity extends AppCompatActivity {
 

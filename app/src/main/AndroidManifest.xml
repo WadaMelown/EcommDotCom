@@ -27,7 +27,7 @@
             android:label="@string/title_activity_maps"></activity>
         <activity android:name="com.example.S6105692.CreateListingActivity" />
         <activity android:name="com.example.S6105692.SearchListingActivity" />
-        <activity android:name="com.example.S6105692.ItemCatalogue" />
+        <activity android:name="com.example.S6105692.BestSellers" />
         <activity android:name="com.example.S6105692.ActiveAdminCategory" />
         <activity android:name="com.example.S6105692.HomeActivity" />
         <activity android:name="com.example.S6105692.RegisterActivity" />

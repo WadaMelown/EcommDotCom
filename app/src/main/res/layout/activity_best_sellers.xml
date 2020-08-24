@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.S6105692.ItemCatalogue">
+    tools:context="com.example.S6105692.BestSellers">
 
     <TextView
         android:id="@+id/categories"
@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Add New Product"
+        android:text="Best Sellers"
         android:textAlignment="center"
         android:textSize="26sp"
         android:textStyle="bold"

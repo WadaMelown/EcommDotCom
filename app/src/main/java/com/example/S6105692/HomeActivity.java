@@ -8,17 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.S6105692.R;
 
 import io.paperdb.Paper;
 
 public class HomeActivity extends AppCompatActivity
 {
     private Button LogoutButton;
-    private Button mapButton;
     private Button SearchListing;
     private Button CreateListing;
-    private EditText editText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -26,7 +24,6 @@ public class HomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_home_screen);
 
         LogoutButton = (Button) findViewById(R.id.logout_button);
-        mapButton   =   (Button) findViewById(R.id.map_button);
         SearchListing   =   (Button) findViewById(R.id.search_listing_button);
         CreateListing   =   (Button) findViewById(R.id.create_listing_button);
 
@@ -44,15 +41,6 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-        mapButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(HomeActivity.this, MapsActivity.class);
-                startActivity(intent);
-            }
-        });
 
         SearchListing.setOnClickListener(new View.OnClickListener()
         {
