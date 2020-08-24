@@ -1,9 +1,11 @@
-package com.example.EcommerceShop;
+package com.example.S6105692;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.S6105692.R;
 
 public class ActiveAdminCategory extends AppCompatActivity
 {

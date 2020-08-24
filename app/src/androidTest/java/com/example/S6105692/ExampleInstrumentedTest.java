@@ -1,4 +1,4 @@
-package com.example.EcommerceShop;
+package com.example.S6105692;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

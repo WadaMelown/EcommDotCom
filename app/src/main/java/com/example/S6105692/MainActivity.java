@@ -1,4 +1,4 @@
-package com.example.EcommerceShop;
+package com.example.S6105692;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,14 +11,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.EcommerceShop.Model.Users;
-import com.example.EcommerceShop.RepeatedInfo.ForgottenPassword;
+import com.example.S6105692.Model.Users;
+import com.example.S6105692.RepeatedInfo.ForgottenPassword;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.mapbox.mapboxsdk.maps.MapView;
+
 
 import io.paperdb.Paper;
 
@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity
 {
     private Button loginButton, signupButton;
     private ProgressDialog loadingBar;
-    private MapView mapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

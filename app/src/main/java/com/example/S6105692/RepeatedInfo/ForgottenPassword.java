@@ -1,6 +1,6 @@
-package com.example.EcommerceShop.RepeatedInfo;
+package com.example.S6105692.RepeatedInfo;
 
-import com.example.EcommerceShop.Model.Users;
+import com.example.S6105692.Model.Users;
 
 public class ForgottenPassword
 {

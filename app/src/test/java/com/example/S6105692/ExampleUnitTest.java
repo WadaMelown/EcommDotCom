@@ -1,4 +1,4 @@
-package com.example.EcommerceShop;
+package com.example.S6105692;
 
 import org.junit.Test;
 

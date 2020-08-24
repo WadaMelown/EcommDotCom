@@ -1,4 +1,4 @@
-package com.example.EcommerceShop;
+package com.example.S6105692;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.S6105692.R;
 
 public class ItemCatalogue extends AppCompatActivity
 {

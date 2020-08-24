@@ -1,4 +1,4 @@
-package com.example.EcommerceShop.Model;
+package com.example.S6105692.Model;
 
 public class Users
 {
