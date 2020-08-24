@@ -14,13 +14,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.S6105692.Model.Users;
-import com.example.S6105692.R;
 import com.example.S6105692.RepeatedInfo.ForgottenPassword;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import io.paperdb.Paper;
 
@@ -31,11 +31,15 @@ public class LoginActivity extends AppCompatActivity
     private ProgressDialog loadingBar;
     private String parentdatabaseName = "Users";
     private CheckBox CheckBoxKey;
+
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        mAuth = FirebaseAuth.getInstance();
 
         LoginButton = (Button) findViewById(R.id.login_button);
         InputPhone = (EditText) findViewById(R.id.login_phone_number);
@@ -62,7 +66,7 @@ public class LoginActivity extends AppCompatActivity
         String password = InputPassword.getText().toString();
         if(TextUtils.isEmpty(phone))
         {
-            Toast.makeText(this, "Please Write Your Phone Number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Write Your Email", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(password))
         {
@@ -79,58 +83,23 @@ public class LoginActivity extends AppCompatActivity
         }
     }
 
-    private void AllowAccessToAccount(final String phone, final String password)
+    private void AllowAccessToAccount(final String email, final String password)
     {
-
-        if(CheckBoxKey.isChecked())
-        {
-            Paper.book().write(ForgottenPassword.UserPhoneKey, phone);
-            Paper.book().write(ForgottenPassword.UserPasswordKey, password);
-        }
-
-        final DatabaseReference RootRef;
-        RootRef = FirebaseDatabase.getInstance().getReference();
-
-        RootRef.addListenerForSingleValueEvent(new ValueEventListener()
-        {
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
-            {
-                if(dataSnapshot.child(parentdatabaseName).child(phone).exists())
-                {
-                    Users userData = dataSnapshot.child(parentdatabaseName).child(phone).getValue(Users.class);
-
-                    if(userData.getPhone().equals(phone))
-                    {
-                        if(userData.getPhone().equals(password))
-                        {
-                            Toast.makeText(LoginActivity.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
-
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                        }
-                        else
-                            {
-                                Toast.makeText(LoginActivity.this, "PassWord is Wrong", Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
-                            }
-                    }
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()) {
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
                 }
-                else 
-                    {
-                        Toast.makeText(LoginActivity.this, "This" + phone + "doesn't exist", Toast.LENGTH_SHORT).show();
-                        loadingBar.dismiss();
-                        Toast.makeText(LoginActivity.this, "You need to create this account", Toast.LENGTH_SHORT).show();
-                    }
             }
-
+        }).addOnFailureListener(this, new OnFailureListener() {
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError)
-            {
-
+            public void onFailure(@NonNull Exception e) {
+                // Incorrect Details
             }
         });
+
     }
 
 
