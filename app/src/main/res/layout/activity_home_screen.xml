@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context="com.example.S6105692.HomeActivity">
+
+
+    <ImageView
+        android:id="@+id/main_login_logo2"
+        android:layout_width="374dp"
+        android:layout_height="258dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/ic_launcher_foreground">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginBottom="61dp"
+        android:background="@android:color/black"
+        android:text="Logout"
+        android:textColor="@android:color/white"
+
+        android:textColorHint="@android:color/white" />
+
+    <Button
+        android:id="@+id/search_listing_button"
+        android:layout_width="269dp"
+        android:layout_height="81dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="331dp"
+        android:text="Search Listing" />
+
+    <Button
+        android:id="@+id/create_listing_button"
+        android:layout_width="272dp"
+        android:layout_height="82dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="242dp"
+        android:text="Create Listing" />
+
+
+</RelativeLayout>

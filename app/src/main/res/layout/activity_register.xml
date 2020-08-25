@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context="com.example.S6105692.RegisterActivity">
+
+    <EditText
+        android:id="@+id/register_username2"
+        android:layout_width="373dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/black"
+        android:hint="Enter Username"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </EditText>
+
+    <ImageView
+        android:id="@+id/main_login_logo"
+        android:layout_width="374dp"
+        android:layout_height="258dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="23dp"
+        android:src="@drawable/ic_launcher_foreground">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="373dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/black"
+        android:hint="Enter Username"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </EditText>]
+
+    <EditText
+        android:id="@+id/register_phone_number"
+        android:layout_width="373dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/register_username"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/black"
+        android:hint="Enter Phone Number"
+        android:inputType="number"
+        android:padding="20dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="373dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/register_phone_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/black"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/register_email"
+        android:layout_width="373dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/register_phone_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-247dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/black"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/register_password"
+        android:layout_marginBottom="-303dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="28dp"
+        android:background="@android:color/black"
+        android:padding="20dp"
+        android:text="Register Account"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+
+        android:textSize="20sp" />
+
+</RelativeLayout>
