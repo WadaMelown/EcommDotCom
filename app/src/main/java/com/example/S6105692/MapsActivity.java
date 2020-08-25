@@ -7,9 +7,7 @@ import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
-import android.view.View;
 
 import com.example.S6105692.Model.Location;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -21,7 +19,6 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.api.LogDescriptor;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -30,7 +27,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -109,7 +105,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             String position =  String.valueOf(arg0.getId().charAt(1));
                             Log.d("rerewqr", "onInfoWindowClick: " + locations.get(0));
-                            Intent intent = new Intent(MapsActivity.this,  ActiveAdminCategory.class);
+                            Intent intent = new Intent(MapsActivity.this,  AdListingScreen.class);
                             Location reference = locations.get(Integer.parseInt(position));
                             intent.putExtra("reference", reference);
                             startActivity(intent);
